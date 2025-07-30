@@ -11,12 +11,12 @@ public abstract class AbstractJob implements Job{
 	private final int maxRetries;
 	private JobStatus status;
 	
-	private final CountDownLatch latch;
 	
-	public AbstractJob(int priority,int maxRetryCount,CountDownLatch latch) {
+	
+	public AbstractJob(int priority,int maxRetryCount) {
 		this.priority=priority;
 		this.maxRetries=maxRetryCount;
-		this.latch=latch;
+		
 	}
 	
 	@Override
@@ -34,9 +34,6 @@ public abstract class AbstractJob implements Job{
 		return this.retryCount;
 	}
 	
-	public CountDownLatch getLatch() {
-		return latch;
-	}
 
 	@Override
 	public void incrementRetryCount() {

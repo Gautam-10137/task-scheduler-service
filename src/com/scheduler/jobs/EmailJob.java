@@ -9,8 +9,8 @@ public class EmailJob extends AbstractJob{
 	
 	private final String recipient;
 	
-	public EmailJob(String recipient,int priority, int maxRetryCount,CountDownLatch latch) {
-		super(priority, maxRetryCount,latch);
+	public EmailJob(String recipient,int priority, int maxRetryCount) {
+		super(priority, maxRetryCount);
 		this.recipient=recipient;
 	}
 

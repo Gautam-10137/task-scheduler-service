@@ -10,7 +10,7 @@ public interface Job extends Runnable{
 	void incrementRetryCount();
 	int getMaxRetries();
 	long getInitialDelayMillis();
-	CountDownLatch getLatch();
+
 	
 	JobStatus getStatus();
 	void setStatus(JobStatus status);

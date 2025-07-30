@@ -8,8 +8,8 @@ public class ReportGenerationJob extends AbstractJob {
 
     private final String reportName;
 
-    public ReportGenerationJob(String reportName, int priority, int maxRetries, CountDownLatch latch) {
-        super(priority, maxRetries, latch);
+    public ReportGenerationJob(String reportName, int priority, int maxRetries) {
+        super(priority, maxRetries);
         this.reportName = reportName;
     }
 
