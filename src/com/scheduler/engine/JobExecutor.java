@@ -51,7 +51,7 @@ public class JobExecutor {
 	                if (job.getStatus() != JobStatus.SUCCESS) {
 	                    throw new Exception("Job did not complete successfully");
 	                }
-	                job.getLatch().countDown();
+	                
 					
 				}catch(Exception e) {
 					System.err.println("[JobExecutor] Job failed: " + job.getJobId() + " | " + e.getMessage());
@@ -75,7 +75,7 @@ public class JobExecutor {
 		else {
 			job.setStatus(JobStatus.EXHAUSTED);
 			System.out.println("[JobExecutor] Job exhausted: " + job.getJobId());
-			job.getLatch().countDown();
+			
 		}
 		
 	}
