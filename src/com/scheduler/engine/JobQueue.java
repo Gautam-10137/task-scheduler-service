@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.concurrent.PriorityBlockingQueue;
 
 import com.scheduler.core.Job;
-
+@Component
 public class JobQueue {
 
 	private PriorityBlockingQueue<Job> queue;
